@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('install modules') {
             steps {
+                cleanWs()
                 sh '''
             yum -y install python3
             yum -y install git
