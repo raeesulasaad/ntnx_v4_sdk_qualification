@@ -7,10 +7,10 @@ pipeline {
     stages {
         stage('install modules') {
             steps {
+                cleanWs()
                 sh '''
             yum -y install python3
             yum -y install git
-            cleanWs()
             python3 -m pip  install -r requirements.txt
             '''
             }
