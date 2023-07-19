@@ -42,7 +42,7 @@
 # Qualification results will be captured here :
 #  https://github.com/raeesulgit/ntnx_v4_sdk_qualification/tree/main/qualified_sdks
 #
-# More info about this script is available at : https://github.com/raeesulgit/ntnx_v4_sdk_qualification/blob/main/README.md
+# More info about this script is available at : https://github.com/raeesulasaad/ntnx_v4_sdk_qualification/blob/main/README.md
 #
 #
 """
@@ -84,7 +84,7 @@ JITA_BASE_URL = "https://jita-web-server-1.eng.nutanix.com/api/v2/"
 JP_GET_URL = JITA_BASE_URL + "job_profiles"
 TASK_GET_URL = JITA_BASE_URL + "agave_tasks"
 SDK_BASE_URL = "https://developers.internal.nutanix.com/api/v1/namespaces"
-GITHUB_URL = "github.com/raeesulgit/ntnx_v4_sdk_qualification"
+GITHUB_URL = "github.com/raeesulasaad/ntnx_v4_sdk_qualification"
 def find_jp_id(**kwargs):
   """
   This method returns job profile id of JOB_PROFILE_NAME.
