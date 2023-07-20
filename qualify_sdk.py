@@ -360,8 +360,7 @@ def qualify_sdk():
     print("*"*41+ "Starting  Iteration : %s  "  %iteration+ "*"*41)
     sdk_version = find_latest_sdk(**kwargs)
     update_jp_with_latest_sdk(jobprofileid, sdk_name, sdk_version, **kwargs)
-    #trigger_task_id = trigger_jp_with_latest_sdk(jobprofileid, **kwargs)
-    trigger_task_id = "64b78c60b5e4752dea4f4c5b"
+    trigger_task_id = trigger_jp_with_latest_sdk(jobprofileid, **kwargs)
     wait_for_jp_trigger_task_completion(trigger_task_id, **kwargs)
     is_jp_passed = validate_jp_trigger_task(trigger_task_id)
     if is_jp_passed:
