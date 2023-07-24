@@ -176,7 +176,7 @@ def wait_for_jp_trigger_task_completion(task_id, **kwargs):
       task_id(str): ID of jita task.
   """
   job_profile = kwargs.get("job_profile")
-  time.sleep(10)
+  time.sleep(20)
   task_get_by_id_url = TASK_GET_URL + "/" + task_id
   is_jp_trigger_task_running = 1
   while is_jp_trigger_task_running:
