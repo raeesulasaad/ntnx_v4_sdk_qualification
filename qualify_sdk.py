@@ -239,7 +239,9 @@ def apply_results_and_git_push(task_id, sdk_name, sdk_version, status, **kwargs)
       sdk_version (str): sdk_version used to qualify.
       status (str): status of jita task .
   """
-  full_local_path = "./sdk-qual-repo"
+  now = datetime.now()
+  dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+  full_local_path = "./sdk-qual-repo"+dt_string
   username = kwargs.get("git_username")
   password = kwargs.get("git_token")
   remote = f"https://{username}:{password}@{GITHUB_URL}.git"
