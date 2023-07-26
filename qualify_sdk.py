@@ -49,6 +49,7 @@
 from datetime import datetime
 import os
 os.environ["GIT_PYTHON_REFRESH"] = "quiet"
+import shutil
 import time
 import argparse
 from requests.auth import HTTPBasicAuth
@@ -240,7 +241,7 @@ def apply_results_and_git_push(task_id, sdk_name, sdk_version, status, **kwargs)
       status (str): status of jita task .
   """
   now = datetime.now()
-  dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+  dt_string = now.strftime("__%d_%m_%Y__%H_%M_%S")
   full_local_path = "./sdk-qual-repo"+dt_string
   username = kwargs.get("git_username")
   password = kwargs.get("git_token")
@@ -259,6 +260,8 @@ def apply_results_and_git_push(task_id, sdk_name, sdk_version, status, **kwargs)
   repo.index.commit(commit_message)
   print("Pushing the results to https://%s/tree/main/qualified_sdks" % GITHUB_URL)
   origin.push()
+  print("Deleting local directory after git push")
+  shutil.rmtree(full_local_path)
 
 def mark_sdk_qualified(repo_path, sdk_name, sdk_version, **kwargs):
   """
