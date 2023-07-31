@@ -183,6 +183,10 @@ def wait_for_jp_trigger_task_completion(task_id, **kwargs):
   while is_jp_trigger_task_running:
     task_resp = requests.get(task_get_by_id_url, verify=False)
     task_details = task_resp.json()
+    if 'stages' not in task_details['data']:
+      print("Jita run is not started yet, polling it after %s seconds " %DEFAULT_JITA_TASK_POLL_TIME)
+      time.sleep(DEFAULT_JITA_TASK_POLL_TIME)
+      continue
     if ('TASK_COMPLETED' in task_details['data']['stages']) or ('TASK_KILLED' in task_details['data']['stages']):
       is_jp_trigger_task_running = 0
     else:
