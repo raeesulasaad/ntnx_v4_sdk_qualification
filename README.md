@@ -5,7 +5,7 @@
 
 <h2>What is this script about</h2>
 
-This script can be used to qualify sdk versions for V4 API namespaces .  It will run job profiles with latest available sdk version in namespace/pc_branch/v4_version given by user. Also script will publish the results in this github repo under [qualified_sdks](https://github.com/raeesulgit/ntnx_v4_sdk_qualification/tree/main/qualified_sdks)/<namespace>/<pc_branch>/<v4_version>. The script is designed in a way that it runs job profile in multiple iterations without any expiry. By means of this, we can ensure the automation of end to end processes of sdk qualification.
+This script can be used to qualify sdk versions for V4 API namespaces .  It will run job profiles with latest available sdk version in namespace/pc_branch/v4_version given by user. Also script will publish the results in this github repo under [qualified_sdks]([https://github.com/raeesulgit/ntnx_v4_sdk_qualification/tree/main/qualified_sdks](https://github.com/raeesulasaad/ntnx_v4_sdk_qualification/tree/main/qualified_sdks/))/<namespace>/<pc_branch>/<v4_version>. The script is designed in a way that it runs job profile in multiple iterations without any expiry. By means of this, we can ensure the automation of end to end processes of sdk qualification.
 
 ---
 
@@ -16,7 +16,7 @@ i)Fetch latest available sdk version within NAMESPACE/PC_BRANCH/V4_VERSION given
 
 ii)Run job profile against it .
 
-iii)Publish results to [qualified_sdks](https://github.com/raeesulgit/ntnx_v4_sdk_qualification/tree/main/qualified_sdks)
+iii)Publish results to [qualified_sdks]([https://github.com/raeesulgit/ntnx_v4_sdk_qualification/tree/main/qualified_sdks](https://github.com/raeesulasaad/ntnx_v4_sdk_qualification/tree/main/qualified_sdks/))
 
 iv)Repeat steps 1-3 .
 
