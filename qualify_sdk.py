@@ -75,7 +75,8 @@ NAMESPACE_TO_SDK_NAME_MAPPING = {
   "vmm": "ntnx-vmm-py-client",
   "aiops": "ntnx-aiops-py-client",
   "cloud": "ntnx-cloud-py-client",
-  "clustermgmt":"ntnx-clustermgmt-py-client"
+  "clustermgmt":"ntnx-clustermgmt-py-client",
+  "volumes":"ntnx-volumes-py-client"
 }
 
 DEFAULT_WAIT_TIME_AFTER_ONE_RUN = 3600
