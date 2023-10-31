@@ -78,7 +78,7 @@ NOTE:  Script will run without any expiry so that it keeps qualifying sdks witho
 
 <h2>Result Analysis</h2>
 
-Test results will be published  [qualified_sdks](https://github.com/raeesulgit/ntnx_v4_sdk_qualification/tree/main/qualified_sdks) folder.
+Test results will be published [qualified_sdks/ ](https://github.com/raeesulasaad/ntnx_v4_sdk_qualification/tree/main/qualified_sdks/ ) folder.
 
 -  ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `If all tests added in job profile passes, sdk version will be considered as qualified and updated in qualified_sdks/<namespace>/<pc_branch>/<v4_version>/latest_qualified_sdk.txt. Logs for the same will be updated in qualified_sdks/<namespace>/<pc_branch>/<v4_version>/logs/passed/sdk_passed_logs.txt. Respective team can use this data to update sdk version used in nutest.`
 
