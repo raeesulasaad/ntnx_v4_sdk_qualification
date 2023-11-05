@@ -168,6 +168,7 @@ def trigger_jp_with_latest_sdk(jobprofileid, **kwargs):
     print("Jita link : https://jita.eng.nutanix.com/results?task_ids=%s" %task_id)
     return task_id
   print("Failed to trigger job profile %s with latest sdk" % job_profile)
+  print("Response is : %s" % trigger_resp.json())
   return None
 
 
@@ -370,7 +371,11 @@ def qualify_sdk():
     print("*"*41+ "Starting  Iteration : %s  "  %iteration+ "*"*41)
     sdk_version = find_latest_sdk(**kwargs)
     update_jp_with_latest_sdk(jobprofileid, sdk_name, sdk_version, **kwargs)
-    trigger_task_id = trigger_jp_with_latest_sdk(jobprofileid, **kwargs)
+    trigger_task_id = None
+    while(trigger_task_id == None):
+      trigger_task_id = trigger_jp_with_latest_sdk(jobprofileid, **kwargs)
+      wait_time_post_failure = fetch_wait_time(jobprofileid, "failed")
+      time.sleep(wait_time_post_failure)
     wait_for_jp_trigger_task_completion(trigger_task_id, **kwargs)
     is_jp_passed = validate_jp_trigger_task(trigger_task_id)
     if is_jp_passed:
