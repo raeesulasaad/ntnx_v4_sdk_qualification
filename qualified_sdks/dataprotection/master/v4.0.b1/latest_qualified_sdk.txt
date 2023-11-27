@@ -1,1 +1,1 @@
-ntnx-dataprotection-py-client==16.8.0.3649
+ntnx-dataprotection-py-client==16.8.0.3766
