@@ -1,3 +1,5 @@
+08/12/2023 21:57:24 : ntnx-dataprotection-py-client==16.7.0.2718 : logs==https://jita.eng.nutanix.com/results?task_ids=65736dc8b5e475f9924d3a97
+
 08/12/2023 19:24:37 : ntnx-dataprotection-py-client==16.7.0.2718 : logs==https://jita.eng.nutanix.com/results?task_ids=657347a1b5e4754435bdccb5
 
 08/12/2023 16:41:49 : ntnx-dataprotection-py-client==16.7.0.2718 : logs==https://jita.eng.nutanix.com/results?task_ids=65732179b5e4754435bdc285
