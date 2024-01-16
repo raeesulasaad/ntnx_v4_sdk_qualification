@@ -1,12 +1,13 @@
 pipeline {
-    agent { dockerContainer { image 'centos:centos7.7.1908'
-                    credentialsId '-u root'} }
+    agent { docker { image 'centos:centos7.7.1908'
+                    args '-u root'} }
     environment {
         HOME = "${env.WORKSPACE}"
     }
     stages {
         stage('install modules') {
             steps {
+                cleanWs()
                 sh '''
             yum -y install python3
             yum -y install git
