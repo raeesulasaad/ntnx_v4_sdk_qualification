@@ -22,7 +22,7 @@ pipeline {
                         passwordVariable: 'JITA_PASS'
                         ),
                 usernamePassword(
-                        credentialsId: 'SDK_QUAL_GIT_CRED', 
+                        credentialsId: 'sdk_qual_github', 
                         usernameVariable: 'GIT_USER', 
                         passwordVariable: 'GIT_PASS'
                         ),]) {
