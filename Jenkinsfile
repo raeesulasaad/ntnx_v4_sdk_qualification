@@ -1,5 +1,5 @@
 pipeline {
-    agent { any { image 'centos:centos7.7.1908'
+    agent { docker { image 'centos:centos7.7.1908'
                     args '-u root'} }
     environment {
         HOME = "${env.WORKSPACE}"
