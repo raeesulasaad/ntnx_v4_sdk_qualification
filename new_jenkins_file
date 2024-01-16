@@ -1,5 +1,5 @@
 pipeline {
-    agent { label “LIGHT” }
+    agent { label "LIGHT" }
     options {
         timeout(time: 5, unit: 'HOURS')
         buildDiscarder(logRotator(daysToKeepStr: '30'))
