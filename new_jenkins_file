@@ -14,6 +14,7 @@ pipeline {
                 sh 'python3 -m venv .venv'
                 sh 'source .venv/bin/activate'
                 sh 'which python3'
+                sh 'which python'
             }
         }
         stage('test') {
