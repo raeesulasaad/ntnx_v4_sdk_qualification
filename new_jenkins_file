@@ -23,7 +23,7 @@ pipeline {
             steps {
                 withCredentials([
                     usernamePassword(
-                        credentialsId: "${JITA_CREDENTIALS}", 
+                        credentialsId: "${JITA_CRED_SDK_QUAL}", 
                         usernameVariable: 'JITA_USER', 
                         passwordVariable: 'JITA_PASS'
                         ),
